@@ -40,15 +40,15 @@ public class SplashScreen_GUI extends javax.swing.JFrame {
 
                 progressBar.setValue(i);
                     
-                if (progressBar.getValue() == 10){
+                if (progressBar.getValue() <= 10){
 
-                labelProgressBar.setText("Carregando Banco de dados...");
+                labelProgressBar.setText("Obrigado Por Baixar nosso Sistema...");
 
                 sleep(100);
 
                 }else if(progressBar.getValue()<=30){
 
-                labelProgressBar.setText("Carregando sistema...");
+                labelProgressBar.setText("Carregando sistema, isso pode demorar um pouco...");
 
                 sleep(100);
                 }else if (progressBar.getValue()<=99){
@@ -92,7 +92,7 @@ public class SplashScreen_GUI extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(null);
 
-        panel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 255), new java.awt.Color(255, 204, 255), new java.awt.Color(255, 153, 255), new java.awt.Color(255, 204, 255)));
+        panel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 255), new java.awt.Color(255, 204, 255), new java.awt.Color(102, 0, 102), new java.awt.Color(153, 0, 153)));
         panel1.setColorPrimario(new java.awt.Color(255, 255, 255));
         panel1.setColorSecundario(new java.awt.Color(255, 255, 255));
         panel1.setLayout(null);
