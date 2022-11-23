@@ -60,7 +60,7 @@ public class SplashScreen_GUI extends javax.swing.JFrame {
                 labelProgressBar.setText("Carregamento completo... Seu programa será iniciado");
                 
                 sleep(3000);
-                dispose();
+                new Salas_GUI().setVisible(true);
                 }
 
                 } catch (InterruptedException ex) {
