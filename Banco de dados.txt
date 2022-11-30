@@ -1,0 +1,25 @@
+CREATE DATABASE `Information` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `Information`;
+CREATE TABLE `cliente` (
+  `cli_email` varchar(50) NOT NULL DEFAULT '',
+  `cli_senha` varchar(50) NOT NULL DEFAULT '',
+  `cli_nome` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`cli_email`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `salas` (
+  `sala_cod` int(11) NOT NULL AUTO_INCREMENT,
+  `sala_nome` varchar(50) NOT NULL DEFAULT '',
+  `sala_local` varchar(50) NOT NULL DEFAULT '',
+  `sala_estado` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`sala_cod`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `reservado` (
+  `sala_escolhida` varchar(50) NOT NULL DEFAULT '',
+  `sala_data` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`sala_escolhida`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+
+

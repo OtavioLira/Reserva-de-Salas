@@ -33,7 +33,7 @@ public class SplashScreen_GUI extends javax.swing.JFrame {
 //            } catch (IOException ex) {
 //                Logger.getLogger(SplashScreen_GUI.class.getName()).log(Level.SEVERE, null, ex);
 //            }
-            for(int i = 0; i<101;i++){                 
+            for(int i = 0; i<101;i+=10){                 
                 try {
                 
                 sleep(100);
@@ -60,13 +60,11 @@ public class SplashScreen_GUI extends javax.swing.JFrame {
                 labelProgressBar.setText("Carregamento completo... Seu programa será iniciado");
                 
                 sleep(3000);
-                new Salas_GUI().setVisible(true);
+                new Login_GUI().setVisible(true);
                 }
 
                 } catch (InterruptedException ex) {
-
-                Logger.getLogger(SplashScreen_GUI.class.getName()).log(Level.SEVERE, null, ex);
-
+                    Logger.getLogger(SplashScreen_GUI.class.getName()).log(Level.SEVERE, null, ex);
                 }
 
             }
@@ -142,6 +140,7 @@ public class SplashScreen_GUI extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(SplashScreen_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
