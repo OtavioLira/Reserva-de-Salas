@@ -1,5 +1,12 @@
 package View;
 public class Reserve_GUI extends javax.swing.JFrame {
+    
+      public static String nome = "";
+    public static String estado = "";
+    
+        String url = "jdbc:mysql://localhost/LUAN"; // enderço do BD
+        String username = "root";        //nome de um usuário de seu BD
+        String password = "";  // senha do BD
     public Reserve_GUI() {
         initComponents();
     }
@@ -11,6 +18,9 @@ public class Reserve_GUI extends javax.swing.JFrame {
         entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("Information?zeroDateTimeBehavior=convertToNullPU").createEntityManager();
         salasQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT s FROM Salas s");
         salasList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : salasQuery.getResultList();
+        entityManager0 = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("LUAN?zeroDateTimeBehavior=convertToNullPU").createEntityManager();
+        salasQuery1 = java.beans.Beans.isDesignTime() ? null : entityManager0.createQuery("SELECT s FROM Salas s");
+        salasList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : salasQuery1.getResultList();
         panelContainer = new javax.swing.JPanel();
         panelImage3 = new org.edisoncor.gui.panel.PanelImage();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -37,23 +47,19 @@ public class Reserve_GUI extends javax.swing.JFrame {
 
         Salas_TBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 0, 102), new java.awt.Color(204, 0, 102), new java.awt.Color(255, 51, 255), new java.awt.Color(255, 0, 204)));
 
-        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, salasList, Salas_TBT);
-        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${salaCod}"));
-        columnBinding.setColumnName("Código da Sala");
-        columnBinding.setColumnClass(Integer.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${salaNome}"));
-        columnBinding.setColumnName("Nome");
+        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, salasList1, Salas_TBT);
+        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${salaEstado}"));
+        columnBinding.setColumnName("Sala Estado");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${salaLocal}"));
-        columnBinding.setColumnName("Local");
+        columnBinding.setColumnName("Sala Local");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${salaEstado}"));
-        columnBinding.setColumnName("Estado");
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${salaNome}"));
+        columnBinding.setColumnName("Sala Nome");
         columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${salaCod}"));
+        columnBinding.setColumnName("Sala Cod");
+        columnBinding.setColumnClass(Integer.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jScrollPane1.setViewportView(Salas_TBT);
@@ -150,6 +156,7 @@ public class Reserve_GUI extends javax.swing.JFrame {
     public static com.toedter.calendar.JDateChooser Data_Choser;
     public static javax.swing.JTable Salas_TBT;
     private javax.persistence.EntityManager entityManager;
+    private javax.persistence.EntityManager entityManager0;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -160,7 +167,9 @@ public class Reserve_GUI extends javax.swing.JFrame {
     private org.edisoncor.gui.panel.PanelImage panelImage3;
     private javax.swing.JPanel panelSala;
     private java.util.List<View.Salas> salasList;
+    private java.util.List<View.Salas> salasList1;
     private javax.persistence.Query salasQuery;
+    private javax.persistence.Query salasQuery1;
     public static javax.swing.JComboBox<String> salas_box;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables

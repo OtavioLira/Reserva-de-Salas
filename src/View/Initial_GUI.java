@@ -1,5 +1,15 @@
 package View;
+
+
 public class Initial_GUI extends javax.swing.JFrame {
+  
+       public static String nome = "";
+    public static String estado = "";
+    
+        String url = "jdbc:mysql://localhost/information"; // enderço do BD
+        String username = "root";        //nome de um usuário de seu BD
+        String password = "";  // senha do BD
+    
     public Initial_GUI() {
         initComponents();
     }
@@ -61,7 +71,7 @@ public class Initial_GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-    //new Reserve_GUI().setVisible(true);
+     new Reserve_GUI().setVisible(true);
     //Model.Functions_DAO.refresh();
     //Controller.SalasLoader.InformationLoader();
     //Controller.SalasLoader.CarregarSalas();

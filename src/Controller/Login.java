@@ -24,7 +24,7 @@ public class Login {
     public static int confirm = 0;
     
     public static void CreateLogin(){
-        String url = "jdbc:mysql://localhost/LUAN"; // enderço do BD
+        String url = "jdbc:mysql://localhost/information"; // enderço do BD
         String username = "root";        //nome de um usuário de seu BD
         String password = "";  // senha do BD
         
@@ -72,7 +72,7 @@ public class Login {
         }    
     }
      public static void ConfirmLogin(){
-        String url = "jdbc:mysql://localhost/LUAN"; // enderço do BD
+        String url = "jdbc:mysql://localhost/information"; // enderço do BD
         String username = "root";        //nome de um usuário de seu BD
         String password = "";  // senha do BD
          try{

@@ -24,7 +24,7 @@ public class Functions_DAO {
        static String Data;
     // Váriaves de alugar sala
     public static void Save(){
-        String url = "jdbc:mysql://localhost/LUAN"; // enderço do BD
+        String url = "jdbc:mysql://localhost/information"; // enderço do BD
         String username = "root";        //nome de um usuário de seu BD
         String password = "";  // senha do BD
         
@@ -61,7 +61,7 @@ public class Functions_DAO {
         }    
 }
     public static void SaveReserve(){
-        String url = "jdbc:mysql://localhost/LUAN"; // enderço do BD
+        String url = "jdbc:mysql://localhost/information"; // enderço do BD
         String username = "root";        //nome de um usuário de seu BD
         String password = "";  // senha do BD
         Connection con = null;
@@ -89,7 +89,7 @@ public class Functions_DAO {
             }      
 }
     public static void UpdateSala(){
-        String url = "jdbc:mysql://localhost/LUAN"; // enderço do BD
+        String url = "jdbc:mysql://localhost/information"; // enderço do BD
         String username = "root";        //nome de um usuário de seu BD
         String password = "";  // senha do BD
         Connection con = null;
@@ -116,7 +116,7 @@ public class Functions_DAO {
             }
 }
     public static void refresh(){
-        String url = "jdbc:mysql://localhost/LUAN"; // enderço do BD
+        String url = "jdbc:mysql://localhost/information"; // enderço do BD
         String username = "root";        //nome de um usuário de seu BD
         String password = "";  // senha do BD
         try{
@@ -132,7 +132,7 @@ public class Functions_DAO {
 }    
     }
        public static void ChangeStateReserve(){
-        String url = "jdbc:mysql://localhost/LUAN"; // enderço do BD
+        String url = "jdbc:mysql://localhost/information"; // enderço do BD
         String username = "root";        //nome de um usuário de seu BD
         String password = "";  // senha do BD
         String estate = "'Ocupado'";

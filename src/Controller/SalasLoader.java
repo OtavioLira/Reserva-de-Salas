@@ -14,7 +14,7 @@ public class SalasLoader {
     public static String nome = "";
     public static String estado = "";
     public static void InformationLoader(){
-        String url = "jdbc:mysql://localhost/LUAN"; // enderço do BD
+        String url = "jdbc:mysql://localhost/information"; // enderço do BD
         String username = "root";        //nome de um usuário de seu BD
         String password = "";  // senha do BD
         try{
@@ -57,7 +57,7 @@ public class SalasLoader {
             }
     }
     public static void CarregarSalas(){
-        String url = "jdbc:mysql://localhost/LUAN"; // enderço do BD
+        String url = "jdbc:mysql://localhost/information"; // enderço do BD
         String username = "root";        //nome de um usuário de seu BD
         String password = "";  // senha do BD
          try{
@@ -95,7 +95,7 @@ public class SalasLoader {
     }
     
     public static void CarregarSalasUpdate(){
-        String url = "jdbc:mysql://localhost/LUAN"; // enderço do BD
+        String url = "jdbc:mysql://localhost/information"; // enderço do BD
         String username = "root";        //nome de um usuário de seu BD
         String password = "";  // senha do BD
          try{

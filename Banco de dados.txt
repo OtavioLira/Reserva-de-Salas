@@ -1,5 +1,5 @@
-CREATE DATABASE `LUAN` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `LUAN`;
+CREATE DATABASE `luan` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `luan`;
 CREATE TABLE `usuarios` (
   `cli_email` varchar(50) NOT NULL DEFAULT '',
   `cli_senha` varchar(50) NOT NULL DEFAULT '',
