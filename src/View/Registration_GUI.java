@@ -28,17 +28,15 @@ public class Registration_GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         panelNice2 = new org.edisoncor.gui.panel.PanelNice();
-        panelImage1 = new org.edisoncor.gui.panel.PanelImage();
-        buttonAction3 = new org.edisoncor.gui.button.ButtonAction();
+        panelImage2 = new org.edisoncor.gui.panel.PanelImage();
+        jLabel6 = new javax.swing.JLabel();
+        Name_TXT1 = new org.edisoncor.gui.textField.TextFieldRoundIcon();
+        jLabel7 = new javax.swing.JLabel();
+        Login_TXT1 = new org.edisoncor.gui.textField.TextFieldRoundIcon();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         Senha_TXT = new org.edisoncor.gui.textField.TextFieldRoundIcon();
-        Login_TXT = new org.edisoncor.gui.textField.TextFieldRoundIcon();
-        jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        buttonAction2 = new org.edisoncor.gui.button.ButtonAction();
-        jLabel5 = new javax.swing.JLabel();
-        Name_TXT = new org.edisoncor.gui.textField.TextFieldRoundIcon();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -46,90 +44,60 @@ public class Registration_GUI extends javax.swing.JFrame {
         panelNice2.setBackground(new java.awt.Color(255, 255, 255));
         panelNice2.setLayout(null);
 
-        panelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Untitled.png"))); // NOI18N
+        panelImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logo.png"))); // NOI18N
+        panelImage2.setLayout(null);
 
-        buttonAction3.setText("Confirmar");
-        buttonAction3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction3ActionPerformed(evt);
-            }
-        });
+        jLabel6.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel6.setText("Nome:");
+        panelImage2.add(jLabel6);
+        jLabel6.setBounds(50, 60, 45, 23);
 
-        javax.swing.GroupLayout panelImage1Layout = new javax.swing.GroupLayout(panelImage1);
-        panelImage1.setLayout(panelImage1Layout);
-        panelImage1Layout.setHorizontalGroup(
-            panelImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelImage1Layout.createSequentialGroup()
-                .addGap(116, 116, 116)
-                .addComponent(buttonAction3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(134, Short.MAX_VALUE))
-        );
-        panelImage1Layout.setVerticalGroup(
-            panelImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelImage1Layout.createSequentialGroup()
-                .addComponent(buttonAction3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 60, Short.MAX_VALUE))
-        );
+        Name_TXT1.setPreferredSize(new java.awt.Dimension(150, 20));
+        panelImage2.add(Name_TXT1);
+        Name_TXT1.setBounds(120, 60, 170, 30);
 
-        panelNice2.add(panelImage1);
-        panelImage1.setBounds(0, 353, 366, 100);
+        jLabel7.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel7.setText("Email:");
+        panelImage2.add(jLabel7);
+        jLabel7.setBounds(50, 110, 50, 23);
 
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Login_TXT1.setPreferredSize(new java.awt.Dimension(150, 20));
+        panelImage2.add(Login_TXT1);
+        Login_TXT1.setBounds(120, 110, 170, 30);
+
+        jLabel2.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 0, 102));
         jLabel2.setText("Senha:");
-        panelNice2.add(jLabel2);
-        jLabel2.setBounds(50, 240, 200, 30);
+        panelImage2.add(jLabel2);
+        jLabel2.setBounds(50, 160, 50, 23);
 
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel3.setText("Nome:");
-        panelNice2.add(jLabel3);
-        jLabel3.setBounds(50, 70, 200, 30);
-        panelNice2.add(Senha_TXT);
-        Senha_TXT.setBounds(50, 280, 250, 40);
-        panelNice2.add(Login_TXT);
-        Login_TXT.setBounds(50, 190, 250, 40);
+        Senha_TXT.setPreferredSize(new java.awt.Dimension(150, 20));
+        panelImage2.add(Senha_TXT);
+        Senha_TXT.setBounds(120, 160, 170, 30);
 
-        jLabel4.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 0, 102));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("CADASTRO");
+        panelImage2.add(jLabel4);
+        jLabel4.setBounds(60, -10, 236, 38);
 
-        buttonAction2.setText("X");
-        buttonAction2.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setBackground(new java.awt.Color(204, 0, 102));
+        jButton1.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("X");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction2ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
+        panelImage2.add(jButton1);
+        jButton1.setBounds(313, 0, 50, 30);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(buttonAction2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(buttonAction2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        panelNice2.add(jPanel1);
-        jPanel1.setBounds(0, 0, 370, 60);
-
-        jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel5.setText("Email:");
-        panelNice2.add(jLabel5);
-        jLabel5.setBounds(50, 150, 200, 30);
-        panelNice2.add(Name_TXT);
-        Name_TXT.setBounds(50, 110, 250, 40);
+        panelNice2.add(panelImage2);
+        panelImage2.setBounds(0, 0, 370, 410);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -139,23 +107,17 @@ public class Registration_GUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelNice2, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
+            .addComponent(panelNice2, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        setSize(new java.awt.Dimension(366, 453));
+        setSize(new java.awt.Dimension(366, 407));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonAction2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction2ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         new Login_GUI().setVisible(true);
         dispose();
-    }//GEN-LAST:event_buttonAction2ActionPerformed
-
-    private void buttonAction3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction3ActionPerformed
-        Controller.Login.CreateLogin();
-        dispose();
-        new Login_GUI().setVisible(true);
-    }//GEN-LAST:event_buttonAction3ActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,17 +155,15 @@ public class Registration_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static org.edisoncor.gui.textField.TextFieldRoundIcon Login_TXT;
-    public static org.edisoncor.gui.textField.TextFieldRoundIcon Name_TXT;
+    public static org.edisoncor.gui.textField.TextFieldRoundIcon Login_TXT1;
+    private org.edisoncor.gui.textField.TextFieldRoundIcon Name_TXT1;
     public static org.edisoncor.gui.textField.TextFieldRoundIcon Senha_TXT;
-    private org.edisoncor.gui.button.ButtonAction buttonAction2;
-    private org.edisoncor.gui.button.ButtonAction buttonAction3;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
-    private org.edisoncor.gui.panel.PanelImage panelImage1;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private org.edisoncor.gui.panel.PanelImage panelImage2;
     private org.edisoncor.gui.panel.PanelNice panelNice2;
     // End of variables declaration//GEN-END:variables
 }

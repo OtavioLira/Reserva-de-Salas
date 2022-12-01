@@ -61,11 +61,13 @@ public class SplashScreen_GUI extends javax.swing.JFrame {
                 
                 sleep(3000);
                 new Login_GUI().setVisible(true);
+                dispose();
                 }
 
                 } catch (InterruptedException ex) {
                     Logger.getLogger(SplashScreen_GUI.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                
 
             }
         }
