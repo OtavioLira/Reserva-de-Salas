@@ -1,6 +1,6 @@
-CREATE DATABASE `Information` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `Information`;
-CREATE TABLE `cliente` (
+CREATE DATABASE `LUAN` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `LUAN`;
+CREATE TABLE `usuarios` (
   `cli_email` varchar(50) NOT NULL DEFAULT '',
   `cli_senha` varchar(50) NOT NULL DEFAULT '',
   `cli_nome` varchar(50) NOT NULL DEFAULT '',

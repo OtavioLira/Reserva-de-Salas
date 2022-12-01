@@ -90,7 +90,7 @@ public class Login {
                         ConfirmNome = rs.getString("cli_nome");
                         if(ConfirmLogin.equals(View.Login_GUI.Login_TXT.getText()) && ConfirmSenha.equals(View.Login_GUI.Senha_TXT.getText())){
                             new Initial_GUI().setVisible(true);
-                            View.Initial_GUI.Name_LBL.setText("Olá, "+ConfirmNome+"!");
+                         
                             confirm = 1;
                         }
                         i++;
