@@ -32,14 +32,21 @@ public class Login {
         senha = View.Registration_GUI.Senha_TXT.getText().toString(); // recebendo o local
         nome = View.Registration_GUI.Name_TXT.getText().toString();
        
-        
+            Connection con = null;
+            try{
+                  con = (Connection) DriverManager.getConnection(url, username, password);
+            }catch(SQLException ex){
+                Logger.getLogger(View.Initial_GUI.class.getName()).log(Level.SEVERE,null, ex);
+            }
+            
+            String sql = "INSERT INTO usuarios(cli_email, cli_senha, cli_nome) values('"+login+"','"+senha+"','"+nome+"')";
         try { 
                 
-            Connection con = null;
+          
 
 
             // Recebendo os dados a serem inseridos na tabela
-            String sql = "INSERT INTO usuarios(cli_email, cli_senha, cli_nome) values('"+login+"','"+senha+"','"+nome+"')";
+            
      
             try { // Tratamento de Erros para inserção
 
@@ -48,7 +55,7 @@ public class Login {
                 inserir.execute(); // Executando a inserção
 
                 JOptionPane.showMessageDialog(null,"\nConta criada com sucesso!","Mensagem",-1);
-                View.Registration_GUI.Login_TXT.setText("");
+                View.Registration_GUI.Name_TXT.setText("");
                 View.Registration_GUI.Senha_TXT.setText("");
                 View.Registration_GUI.Name_TXT.setText("");
            
@@ -59,7 +66,7 @@ public class Login {
         }catch(NumberFormatException erro){
             // Tratamento de erro caso o usuario não digite o telefone corretamente
             JOptionPane.showMessageDialog(null,"Digite os dados corretamente","ERRO",0);
-            View.Registration_GUI.Login_TXT.setText("");
+            View.Registration_GUI.Name_TXT.setText("");
             View.Registration_GUI.Senha_TXT.setText("");
             View.Registration_GUI.Name_TXT.setText("");
         }    

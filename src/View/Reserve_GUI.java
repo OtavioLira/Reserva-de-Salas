@@ -11,7 +11,7 @@ public class Reserve_GUI extends javax.swing.JFrame {
         entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("Information?zeroDateTimeBehavior=convertToNullPU").createEntityManager();
         salasQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT s FROM Salas s");
         salasList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : salasQuery.getResultList();
-        jPanel2 = new javax.swing.JPanel();
+        panelContainer = new javax.swing.JPanel();
         panelImage3 = new org.edisoncor.gui.panel.PanelImage();
         jScrollPane1 = new javax.swing.JScrollPane();
         Salas_TBT = new javax.swing.JTable();
@@ -28,7 +28,8 @@ public class Reserve_GUI extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(null);
 
-        jPanel2.setLayout(null);
+        panelContainer.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 0, 102), new java.awt.Color(255, 0, 102), new java.awt.Color(153, 0, 51), new java.awt.Color(153, 0, 51)));
+        panelContainer.setLayout(null);
 
         panelImage3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logo.png"))); // NOI18N
         panelImage3.setOpaque(false);
@@ -114,11 +115,11 @@ public class Reserve_GUI extends javax.swing.JFrame {
         });
         panelImage3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, 190, 30));
 
-        jPanel2.add(panelImage3);
+        panelContainer.add(panelImage3);
         panelImage3.setBounds(0, 0, 800, 450);
 
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 0, 800, 450);
+        getContentPane().add(panelContainer);
+        panelContainer.setBounds(0, 0, 800, 450);
 
         bindingGroup.bind();
 
@@ -153,11 +154,9 @@ public class Reserve_GUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel panelContainer;
     private javax.swing.JPanel panelData;
-    private org.edisoncor.gui.panel.PanelImage panelImage1;
-    private org.edisoncor.gui.panel.PanelImage panelImage2;
     private org.edisoncor.gui.panel.PanelImage panelImage3;
     private javax.swing.JPanel panelSala;
     private java.util.List<View.Salas> salasList;

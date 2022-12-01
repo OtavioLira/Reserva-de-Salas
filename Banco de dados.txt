@@ -21,5 +21,10 @@ CREATE TABLE `reservado` (
   PRIMARY KEY (`sala_escolhida`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
-
-
+INSERT INTO salas (sala_cod,sala_nome,sala_local,sala_estado) values (01,'S16','predioS','desocupado');
+INSERT INTO salas (sala_cod,sala_nome,sala_local,sala_estado) values (02,'S15','predioS','ocupado');
+INSERT INTO salas (sala_cod,sala_nome,sala_local,sala_estado) values (03,'S20','predioS','desocupado');
+INSERT INTO salas (sala_cod,sala_nome,sala_local,sala_estado) values (04,'S22','predioS','desocupado');
+INSERT INTO salas (sala_cod,sala_nome,sala_local,sala_estado) values (05,'S08','predioS','ocupado');
+INSERT INTO salas (sala_cod,sala_nome,sala_local,sala_estado) values (06,'S09','predioS','desocupado');
+insert into reservado (sala_escolhida, sala_data) values("s16", "21/22/2022");

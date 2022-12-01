@@ -27,22 +27,26 @@ public class PDF_GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelNice1 = new org.edisoncor.gui.panel.PanelNice();
+        panelImage3 = new org.edisoncor.gui.panel.PanelImage();
         panelNice2 = new org.edisoncor.gui.panel.PanelNice();
         jLabel2 = new javax.swing.JLabel();
         buttonAction1 = new org.edisoncor.gui.button.ButtonAction();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        panelRectTranslucido1 = new org.edisoncor.gui.panel.PanelRectTranslucido();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        panelRectTranslucido2 = new org.edisoncor.gui.panel.PanelRectTranslucido();
+        jLabel4 = new javax.swing.JLabel();
         NamePDF_TXT = new org.edisoncor.gui.textField.TextFieldRoundIcon();
-        Confirm_BTN = new org.edisoncor.gui.button.ButtonAction();
+        jLabel5 = new javax.swing.JLabel();
         NameEmpresa_TXT = new org.edisoncor.gui.textField.TextFieldRoundIcon();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        panelNice1.setBackground(new java.awt.Color(204, 204, 204));
-        panelNice1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        panelNice1.setLayout(null);
+        panelImage3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 0, 102), new java.awt.Color(255, 0, 102), new java.awt.Color(204, 0, 102), new java.awt.Color(204, 0, 102)));
+        panelImage3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logo.png"))); // NOI18N
+        panelImage3.setOpaque(false);
+        panelImage3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelNice2.setBackground(new java.awt.Color(255, 0, 0));
         panelNice2.setLayout(null);
@@ -62,57 +66,83 @@ public class PDF_GUI extends javax.swing.JFrame {
         panelNice2.add(buttonAction1);
         buttonAction1.setBounds(360, 0, 40, 35);
 
-        panelNice1.add(panelNice2);
-        panelNice2.setBounds(0, 0, 400, 30);
+        panelImage3.add(panelNice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Nome do arquivo:");
-        panelNice1.add(jLabel1);
-        jLabel1.setBounds(40, 140, 140, 30);
+        panelRectTranslucido1.setBackground(new java.awt.Color(255, 255, 255));
+        panelRectTranslucido1.setColorDeBorde(new java.awt.Color(255, 255, 255));
+        panelRectTranslucido1.setColorPrimario(new java.awt.Color(255, 255, 255));
+        panelRectTranslucido1.setColorSecundario(new java.awt.Color(255, 255, 255));
 
-        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Nome da empresa:");
-        panelNice1.add(jLabel3);
-        jLabel3.setBounds(40, 50, 150, 30);
-        panelNice1.add(NamePDF_TXT);
-        NamePDF_TXT.setBounds(40, 180, 300, 40);
-
-        Confirm_BTN.setText("Confirmar");
-        Confirm_BTN.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Voltar");
+        jButton1.setPreferredSize(new java.awt.Dimension(150, 23));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Confirm_BTNActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        panelNice1.add(Confirm_BTN);
-        Confirm_BTN.setBounds(130, 270, 116, 35);
-        panelNice1.add(NameEmpresa_TXT);
-        NameEmpresa_TXT.setBounds(40, 90, 300, 40);
+        panelRectTranslucido1.add(jButton1);
+
+        jButton2.setText("Criar");
+        jButton2.setPreferredSize(new java.awt.Dimension(150, 23));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        panelRectTranslucido1.add(jButton2);
+
+        panelImage3.add(panelRectTranslucido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 340, 40));
+
+        panelRectTranslucido2.setBackground(new java.awt.Color(255, 255, 255));
+        panelRectTranslucido2.setColorDeBorde(new java.awt.Color(204, 0, 102));
+        panelRectTranslucido2.setColorPrimario(new java.awt.Color(255, 255, 255));
+        panelRectTranslucido2.setColorSecundario(new java.awt.Color(255, 255, 255));
+
+        jLabel4.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Nome do arquivo:");
+        panelRectTranslucido2.add(jLabel4);
+
+        NamePDF_TXT.setPreferredSize(new java.awt.Dimension(150, 20));
+        panelRectTranslucido2.add(NamePDF_TXT);
+
+        jLabel5.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Nome da empresa:");
+        panelRectTranslucido2.add(jLabel5);
+
+        NameEmpresa_TXT.setPreferredSize(new java.awt.Dimension(150, 20));
+        panelRectTranslucido2.add(NameEmpresa_TXT);
+
+        panelImage3.add(panelRectTranslucido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 340, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelNice1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+            .addComponent(panelImage3, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelNice1, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
+            .addComponent(panelImage3, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(401, 360));
+        setSize(new java.awt.Dimension(358, 209));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void Confirm_BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Confirm_BTNActionPerformed
-        Model.PDF_Generator.GerarPDF();
-        dispose();
-    }//GEN-LAST:event_Confirm_BTNActionPerformed
 
     private void buttonAction1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction1ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_buttonAction1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Model.PDF_Generator.GerarPDF();
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,14 +180,17 @@ public class PDF_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private org.edisoncor.gui.button.ButtonAction Confirm_BTN;
     public static org.edisoncor.gui.textField.TextFieldRoundIcon NameEmpresa_TXT;
     public static org.edisoncor.gui.textField.TextFieldRoundIcon NamePDF_TXT;
     private org.edisoncor.gui.button.ButtonAction buttonAction1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private org.edisoncor.gui.panel.PanelNice panelNice1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private org.edisoncor.gui.panel.PanelImage panelImage3;
     private org.edisoncor.gui.panel.PanelNice panelNice2;
+    private org.edisoncor.gui.panel.PanelRectTranslucido panelRectTranslucido1;
+    private org.edisoncor.gui.panel.PanelRectTranslucido panelRectTranslucido2;
     // End of variables declaration//GEN-END:variables
 }

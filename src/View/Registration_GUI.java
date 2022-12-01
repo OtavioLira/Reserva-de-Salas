@@ -30,13 +30,14 @@ public class Registration_GUI extends javax.swing.JFrame {
         panelNice2 = new org.edisoncor.gui.panel.PanelNice();
         panelImage2 = new org.edisoncor.gui.panel.PanelImage();
         jLabel6 = new javax.swing.JLabel();
-        Name_TXT1 = new org.edisoncor.gui.textField.TextFieldRoundIcon();
+        Name_TXT = new org.edisoncor.gui.textField.TextFieldRoundIcon();
         jLabel7 = new javax.swing.JLabel();
-        Login_TXT1 = new org.edisoncor.gui.textField.TextFieldRoundIcon();
+        Login_TXT = new org.edisoncor.gui.textField.TextFieldRoundIcon();
         jLabel2 = new javax.swing.JLabel();
         Senha_TXT = new org.edisoncor.gui.textField.TextFieldRoundIcon();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -53,9 +54,9 @@ public class Registration_GUI extends javax.swing.JFrame {
         panelImage2.add(jLabel6);
         jLabel6.setBounds(50, 60, 45, 23);
 
-        Name_TXT1.setPreferredSize(new java.awt.Dimension(150, 20));
-        panelImage2.add(Name_TXT1);
-        Name_TXT1.setBounds(120, 60, 170, 30);
+        Name_TXT.setPreferredSize(new java.awt.Dimension(150, 20));
+        panelImage2.add(Name_TXT);
+        Name_TXT.setBounds(120, 60, 170, 30);
 
         jLabel7.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(204, 0, 102));
@@ -63,9 +64,9 @@ public class Registration_GUI extends javax.swing.JFrame {
         panelImage2.add(jLabel7);
         jLabel7.setBounds(50, 110, 50, 23);
 
-        Login_TXT1.setPreferredSize(new java.awt.Dimension(150, 20));
-        panelImage2.add(Login_TXT1);
-        Login_TXT1.setBounds(120, 110, 170, 30);
+        Login_TXT.setPreferredSize(new java.awt.Dimension(150, 20));
+        panelImage2.add(Login_TXT);
+        Login_TXT.setBounds(120, 110, 170, 30);
 
         jLabel2.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 0, 102));
@@ -96,6 +97,15 @@ public class Registration_GUI extends javax.swing.JFrame {
         panelImage2.add(jButton1);
         jButton1.setBounds(313, 0, 50, 30);
 
+        jButton2.setText("Confirmar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        panelImage2.add(jButton2);
+        jButton2.setBounds(123, 200, 160, 23);
+
         panelNice2.add(panelImage2);
         panelImage2.setBounds(0, 0, 370, 410);
 
@@ -118,6 +128,12 @@ public class Registration_GUI extends javax.swing.JFrame {
         new Login_GUI().setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Controller.Login.CreateLogin();
+        new Login_GUI().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,10 +171,11 @@ public class Registration_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static org.edisoncor.gui.textField.TextFieldRoundIcon Login_TXT1;
-    private org.edisoncor.gui.textField.TextFieldRoundIcon Name_TXT1;
+    public static org.edisoncor.gui.textField.TextFieldRoundIcon Login_TXT;
+    public static org.edisoncor.gui.textField.TextFieldRoundIcon Name_TXT;
     public static org.edisoncor.gui.textField.TextFieldRoundIcon Senha_TXT;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
